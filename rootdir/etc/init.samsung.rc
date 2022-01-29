@@ -1,7 +1,4 @@
 on init
-    # Disable vendor overlay
-    mount none /vendor/lost+found /vendor/overlay bind
-
     # Set SunlightEnhancement sysnode owner
     chown system system /sys/class/mdnie/mdnie/lux
 
