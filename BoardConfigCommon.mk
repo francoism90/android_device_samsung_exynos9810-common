@@ -16,40 +16,40 @@
 
 COMMON_PATH := device/samsung/exynos9810-common
 
-# Include
+## Include
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
-# Audio
+## Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 
-# Bluetooth
+## Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 
-# Firmware
+## Firmware
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-# Platform
+## Platform
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
 TARGET_SOC := exynos9810
 TARGET_BOOTLOADER_BOARD_NAME := universal9810
 
-# Architecture
+## Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a53
 
-# Secondary Architecture
+## Secondary Architecture
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
-# Kernel
+## Kernel
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -65,45 +65,48 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := r353983c1
 TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
-# Partitions
+## Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 57671680
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 68149248
 BOARD_CACHEIMAGE_PARTITION_SIZE    := 209715200
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE  := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# Filesystem
+## Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 BOARD_ROOT_EXTRA_FOLDERS := efs
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Graphics
+## Graphics
 TARGET_USES_HWC2 := true
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
-# Recovery
+## Properties
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+
+TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+
+## Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/recovery.fstab
 BOARD_HAS_DOWNLOAD_MODE := true
 
-# Charger
+## Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# VNDK
+## VNDK
 BOARD_VNDK_VERSION := current
 PRODUCT_TARGET_VNDK_VERSION := 29
 
-# HIDL
+## HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
 
-# SELinux
+## SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
-# Properties
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-
-# Inherit from the proprietary version
+## Inherit from the proprietary version
 -include vendor/samsung/exynos9810-common/BoardConfigVendor.mk
