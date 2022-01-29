@@ -111,9 +111,9 @@ vendor/lib/egl/libGLES_mali.so
 vendor/lib/libion_exynos.so
 vendor/lib/libmalicore.bc
 vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/libbcc_mali.so
 vendor/lib64/libion_exynos.so
 vendor/lib64/libLLVM_android_mali.so
-vendor/lib64/libbcc_mali.so
 vendor/lib64/libmalicore.bc
 
 ## HWC
@@ -214,8 +214,6 @@ vendor/lib/libsomxwmad.so
 vendor/lib/libsomxwmv7d.so
 vendor/lib/libsomxwmv8d.so
 vendor/lib/libstagefright_omx_vendor.so
-vendor/lib/libstagefright_softomx_plugin.so
-vendor/lib/libstagefright_softomx.so
 vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
 vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
 vendor/lib/omx/libOMX.Exynos.AVC.WFD.Encoder.so
@@ -270,7 +268,6 @@ vendor/lib/libRSDriverArm.so
 vendor/lib64/libRSDriverArm.so
 
 ## RIL
-vendor/bin/hw/rild
 vendor/bin/cbd
 vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/plmn_delta.bin
