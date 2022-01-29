@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,21 +19,8 @@ COMMON_PATH := device/samsung/exynos9810-common
 ## Include
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
-## Audio
-USE_XML_AUDIO_POLICY_CONF := 1
-
-## Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
-
-## Firmware
-TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
-
-## Platform
-BOARD_VENDOR := samsung
-TARGET_BOARD_PLATFORM := exynos5
-TARGET_SOC := exynos9810
-TARGET_BOOTLOADER_BOARD_NAME := universal9810
+## Inherit from the proprietary version
+include vendor/samsung/exynos9810-common/BoardConfigVendor.mk
 
 ## Architecture
 TARGET_ARCH := arm64
@@ -42,47 +29,70 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a53
 
-## Secondary Architecture
+## Architecture (Secondary)
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
-## Kernel
+## Audio
+USE_XML_AUDIO_POLICY_CONF := 1
+
+## Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
+
+## Boot Image
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
-BOARD_KERNEL_IMAGE_NAME := Image
-BOARD_KERNEL_SEPARATED_DT := true
+
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/samsung/exynos9810
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r353983c1
-TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
-## Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE     := 57671680
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 68149248
-BOARD_CACHEIMAGE_PARTITION_SIZE    := 209715200
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE  := ext4
-BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+
+## DTBO
+TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+BOARD_KERNEL_SEPARATED_DT := true
 
 ## Filesystem
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE  := ext4
+TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
-BOARD_ROOT_EXTRA_FOLDERS := efs
-TARGET_COPY_OUT_VENDOR := vendor
+
+## Firmware
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_RADIOIMAGE := true
 
 ## Graphics
 TARGET_USES_HWC2 := true
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
+
+## Kernel
+BOARD_KERNEL_IMAGE_NAME := Image
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := r353983c1
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_KERNEL_SOURCE := kernel/samsung/exynos9810
+
+## Partitions
+BOARD_BOOTIMAGE_PARTITION_SIZE := 57671680
+BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
+BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 68149248
+
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+BOARD_ROOT_EXTRA_FOLDERS := efs
+
+## Platform
+BOARD_VENDOR := samsung
+TARGET_BOARD_PLATFORM := exynos5
+TARGET_BOOTLOADER_BOARD_NAME := universal9810
+TARGET_SOC := exynos9810
 
 ## Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
@@ -91,12 +101,9 @@ TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
 ## Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/recovery.fstab
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 BOARD_HAS_DOWNLOAD_MODE := true
-
-## Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
 
 ## VNDK
 BOARD_VNDK_VERSION := current
@@ -108,5 +115,5 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
 ## SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
-## Inherit from the proprietary version
--include vendor/samsung/exynos9810-common/BoardConfigVendor.mk
+## Charger
+BOARD_CHARGER_ENABLE_SUSPEND := true
