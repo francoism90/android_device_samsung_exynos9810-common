@@ -25,8 +25,17 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 29
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.samsungexynos9810 \
+    init.baseband.rc \
+    init.samsung.bsp.rc \
     init.samsung.rc \
-    init.usb_accessory.rc
+    init.samsungexynos9810.rc \
+    init.samsungexynos9810.usb.rc \
+    init.usb_accessory.rc \
+    init.vendor.onebinary.rc \
+    init.vendor.rilchip.rc \
+    init.vendor.rilcommon.rc \
+    mobicore.rc \
+    ueventd.exynos9810.rc
 
 # Recovery
 PRODUCT_PACKAGES += \

@@ -269,7 +269,6 @@ vendor/lib64/libRSDriverArm.so
 
 ## RIL
 vendor/bin/cbd
-vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
@@ -291,10 +290,6 @@ vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 ## SECNATIVE
 vendor/lib/libsecnativefeature.so
 vendor/lib64/libsecnativefeature.so
-
-## Mobicore
-vendor/etc/init/mobicore.rc
-vendor/etc/init/init.samsungexynos9810.usb.rc
 
 ## Mobicore Firmware
 vendor/app/mcRegistry/ffffffffd00000000000000000000062.tlbin
