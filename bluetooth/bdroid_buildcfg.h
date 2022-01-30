@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2012 The Android Open Source Project
- * Copyright (C) 2014 The CyanogenMod Project <http://www.cyanogenmod.org>
+ * Copyright (C) 2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,34 +19,44 @@
 
 #pragma push_macro("PROPERTY_VALUE_MAX")
 
+#if !defined(OS_GENERIC)
 #include <cutils/properties.h>
 #include <string.h>
 
-static inline const char* BtmGetDefaultName()
+static inline const char *getBTDefaultName()
 {
-    char product_device[PROPERTY_VALUE_MAX];
-    property_get("ro.product.device", product_device, "");
-    
-    if (strstr(product_device, "starlte"))
+    char device[PROPERTY_VALUE_MAX];
+    property_get("ro.product.device", device, "");
+
+    if (!strcmp("starlte", device))
         return "Galaxy S9";
-    if (strstr(product_device, "star2lte"))
+
+    if (!strcmp("star2lte", device))
         return "Galaxy S9+";
-    if (strstr(product_device, "crownlte"))
+
+    if (!strcmp("crownlte", device))
         return "Galaxy Note 9";
-    
-    // Fallback to Default
+
     return "Samsung Galaxy";
 }
 
-#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
+#define BTM_DEF_LOCAL_NAME getBTDefaultName()
+#endif /* OS_GENERIC */
+
+/*
+ * Toggles support for vendor specific extensions such as RPA offloading,
+ * feature discovery, multi-adv etc.
+ */
+#define BLE_VND_INCLUDED TRUE
+
+/* 'strings libbluetooth.so' */
+#define BTA_AV_SINK_INCLUDED TRUE
 
 #define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
 #define BTIF_HF_WBS_PREFERRED FALSE /* Don't prefer WBS    */
-
-#define BLE_VND_INCLUDED TRUE
 
 #define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
 
 #pragma pop_macro("PROPERTY_VALUE_MAX")
 
-#endif
+#endif /* _BDROID_BUILDCFG_H */
