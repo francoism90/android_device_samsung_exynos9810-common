@@ -286,6 +286,7 @@ vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/lib/libaudio-ril.so
+vendor/lib/libaudioproxy.so
 vendor/lib/libril.so:vendor/lib/libril-samsung.so
 vendor/lib/libsemnativecarrierfeature.so
 vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
@@ -339,6 +340,9 @@ vendor/app/mcRegistry/ffffffff000000000000000000000059.tlbin
 vendor/etc/sensors/hals.conf
 vendor/lib/sensors.grip.so
 vendor/lib64/sensors.grip.so
+vendor/lib/sensors.sensorhub.so
+vendor/lib64/sensors.sensorhub.so
+
 
 ## Widevine
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
