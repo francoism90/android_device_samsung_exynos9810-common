@@ -17,6 +17,8 @@ vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecaudioinfo.so
+vendor/lib/libvndsecril-client.so
+vendor/lib64/libvndsecril-client.so
 
 ## Camera Dependencies
 vendor/lib/libSEF.quram.so
