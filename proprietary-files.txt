@@ -35,6 +35,8 @@ vendor/lib64/libsensorlistener.so
 vendor/lib64/libstagefrighthw.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
+vendor/lib/libacryl_plugin_slsi_hdr10.so
+vendor/lib64/libacryl_plugin_slsi_hdr10.so
 
 ## Codecs
 vendor/etc/media_codecs.xml
@@ -137,6 +139,7 @@ vendor/lib/libexynosutils.so
 vendor/lib/libexynosv4l2.so
 vendor/lib/libGrallocWrapper.so
 vendor/lib/libion_exynos.so
+vendor/lib/libMcClient.so
 vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
 vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
 vendor/lib/omx/libOMX.Exynos.AVC.WFD.Encoder.so
@@ -170,6 +173,7 @@ vendor/lib64/libexynosutils.so
 vendor/lib64/libexynosv4l2.so
 vendor/lib64/libGrallocWrapper.so
 vendor/lib64/libion_exynos.so
+vendor/lib64/libMcClient.so
 vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
 vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
 vendor/lib64/omx/libOMX.Exynos.AVC.WFD.Encoder.so
