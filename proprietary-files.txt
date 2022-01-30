@@ -3,21 +3,27 @@
 ## Audio
 vendor/etc/audio_board_info.xml
 vendor/etc/default_volume_tables.xml
-vendor/etc/usb_audio_policy_configuration.xml
 vendor/etc/seccomp_policy/mediacodec.policy
-vendor/lib/vndk/libtinyalsa.so
-vendor/lib/vndk/libaudioroute.so
-vendor/lib/libSamsungPostProcessConvertor.so
+vendor/etc/usb_audio_policy_configuration.xml
+vendor/lib/lib_SamsungRec_06006.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_soundaliveresampler.so
+vendor/lib/libaboxpcmdump.so
 vendor/lib/libalsautils_sec.so
+vendor/lib/libaudiodebugfs.so
+vendor/lib/libcodecdspdump.so
+vendor/lib/libdatamod.so
 vendor/lib/libfloatingfeature.so
 vendor/lib/libprofileparamstorage.so
+vendor/lib/librecordalive.so
+vendor/lib/libSamsungPostProcessConvertor.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
+vendor/lib/libvndsecril-client.so
+vendor/lib/vndk/libaudioroute.so
+vendor/lib/vndk/libtinyalsa.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecaudioinfo.so
-vendor/lib/libvndsecril-client.so
 vendor/lib64/libvndsecril-client.so
 
 ## Camera Dependencies
