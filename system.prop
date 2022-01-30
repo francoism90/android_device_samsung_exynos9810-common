@@ -15,3 +15,14 @@ config.disable_consumerir=true
 ro.vendor.cscsupported=1
 ro.cmc.device_type=pd
 ro.cmc.version=2.0
+
+# adb
+ro.allow.mock.location=1
+persist.adb.notify=0
+persist.sys.usb.config=mtp,adb
+ro.secure=0
+ro.adb.secure=0
+ro.debuggable=1
+service.adb.root=1
+persist.sys.root_access=1
+persist.service.adb.enable=1
