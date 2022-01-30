@@ -338,6 +338,8 @@ vendor/app/mcRegistry/ffffffff000000000000000000000059.tlbin
 
 ## Sensors
 vendor/etc/sensors/hals.conf
+vendor/lib/sensors.bio.so
+vendor/lib64/sensors.bio.so
 vendor/lib/sensors.grip.so
 vendor/lib64/sensors.grip.so
 vendor/lib/sensors.sensorhub.so
