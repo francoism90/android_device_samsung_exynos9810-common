@@ -4,10 +4,10 @@
 /data/vendor/nfc(/.*)?                       u:object_r:nfc_vendor_data_file:s0
 
 ## Devices
-/dev/block/platform/.+/by-name/dtb           u:object_r:dtb_block_device:s0
-/dev/block/platform/.+/by-name/radio2        u:object_r:radio_block_device:s0
-/dev/block/platform/.+/by-name/system        u:object_r:system_block_device:s0
-/dev/block/platform/.+/by-name/vendor        u:object_r:system_block_device:s0
+/dev/block/platform/.+/by-name/DTB           u:object_r:dtb_block_device:s0
+/dev/block/platform/.+/by-name/RADIO         u:object_r:radio_block_device:s0
+/dev/block/platform/.+/by-name/SYSTEM        u:object_r:system_block_device:s0
+/dev/block/platform/.+/by-name/VENDOR        u:object_r:system_block_device:s0
 
 # Camera
 /dev/jsqz                                    u:object_r:jsqz_device:s0
@@ -54,8 +54,8 @@
 
 ## Sysfs
 # Block
-/sys/devices/platform/13d00000.dwmmc2/mmc_host/mmc0/mmc0:aaaa/block/mmcblk0/queue/scheduler       u:object_r:sysfs_io_sched_tuneable:s0
-/sys/devices/platform/13d60000.ufs/host0/target0:0:0/0:0:0:[0-4]/block/sd[a-e]/queue/scheduler    u:object_r:sysfs_io_sched_tuneable:s0
+/sys/devices/platform/11500000.dwmmc2/mmc_host/mmc0/mmc0:aaaa/block/mmcblk0/queue/scheduler       u:object_r:sysfs_io_sched_tuneable:s0
+/sys/devices/platform/11120000.ufs/host0/target0:0:0/0:0:0:[0-4]/block/sd[a-e]/queue/scheduler    u:object_r:sysfs_io_sched_tuneable:s0
 
 # Camera
 /sys/devices/virtual/camera/flash/rear_flash                  u:object_r:sysfs_camera_writable:s0
@@ -64,11 +64,11 @@
 /sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
 
 # Sensors
-/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)                  u:object_r:sysfs_iio:s0
-/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/poll_delay       u:object_r:sysfs_sensors_writable:s0
-/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/buffer/enable    u:object_r:sysfs_sensors_writable:s0
-/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/buffer/length    u:object_r:sysfs_sensors_writable:s0
-/sys/devices/platform/15c40000.adc(/.*)                                           u:object_r:sysfs_iio:s0
+/sys/devices/platform/13ac0000.spi/spi_master/spi20/spi20.0(/.*)                  u:object_r:sysfs_iio:s0
+/sys/devices/platform/13ac0000.spi/spi_master/spi20/spi20.0(/.*)/poll_delay       u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/13ac0000.spi/spi_master/spi20/spi20.0(/.*)/buffer/enable    u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/13ac0000.spi/spi_master/spi20/spi20.0(/.*)/buffer/length    u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/14230000.adc(/.*)                                           u:object_r:sysfs_iio:s0
 /sys/devices/virtual/input/input[0-9]/enable                                      u:object_r:sysfs_input_writable:s0
 /sys/devices/virtual/input/input[0-9]/poll_delay                                  u:object_r:sysfs_input_writable:s0
 /sys/devices/virtual/sec/hall_ic(/.*)                                             u:object_r:sysfs_sec_key:s0
