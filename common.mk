@@ -139,11 +139,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/idc/sec_e-pen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_e-pen.idc \
     $(COMMON_PATH)/configs/keylayout/gpio_keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio_keys.kl
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0-service.samsung \
-    libkeymaster4_1support.vendor:64
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.samsung
