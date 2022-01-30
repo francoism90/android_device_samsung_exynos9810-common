@@ -26,26 +26,29 @@ vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecaudioinfo.so
 vendor/lib64/libvndsecril-client.so
 
+## Bluetooth
+vendor/lib64/libbt-vendor.so
+
 ## Camera Dependencies
-vendor/lib/libSEF.quram.so
+vendor/lib/libacryl_plugin_slsi_hdr10.so
 vendor/lib/libacryl.so
 vendor/lib/libcsc.so
 vendor/lib/libgiantmscl.so
 vendor/lib/libhwjpeg.so
+vendor/lib/libSEF.quram.so
 vendor/lib/libsensorlistener.so
 vendor/lib/libstagefrighthw.so
 vendor/lib/libuniapi.so
 vendor/lib/libuniplugin.so
-vendor/lib64/libSEF.quram.so
+vendor/lib64/libacryl_plugin_slsi_hdr10.so
 vendor/lib64/libcsc.so
 vendor/lib64/libgiantmscl.so
 vendor/lib64/libhwjpeg.so
+vendor/lib64/libSEF.quram.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libstagefrighthw.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
-vendor/lib/libacryl_plugin_slsi_hdr10.so
-vendor/lib64/libacryl_plugin_slsi_hdr10.so
 
 ## Codecs
 vendor/etc/media_codecs.xml
@@ -288,7 +291,12 @@ vendor/lib/libRSDriverArm.so
 vendor/lib64/libRSDriverArm.so
 
 ## RIL
+vendor/bin/hw/rild
 vendor/bin/cbd
+vendor/bin/mcDriverDaemon
+vendor/bin/argosd
+vendor/bin/main_abox
+vendor/bin/secril_config_svc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
@@ -352,7 +360,6 @@ vendor/lib/sensors.grip.so
 vendor/lib64/sensors.grip.so
 vendor/lib/sensors.sensorhub.so
 vendor/lib64/sensors.sensorhub.so
-
 
 ## Widevine
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc

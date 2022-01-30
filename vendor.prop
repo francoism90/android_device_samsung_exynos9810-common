@@ -1,2 +1,7 @@
 # Keystore
 ro.hardware.keystore=mdfpp
+
+## RIL
+vendor.rild.libpath=/vendor/lib64/libsec-ril.so
+vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
+vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
