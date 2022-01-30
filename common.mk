@@ -35,7 +35,7 @@ PRODUCT_PACKAGES += \
     init.vendor.rilchip.rc \
     init.vendor.rilcommon.rc \
     mobicore.rc \
-    ueventd.exynos9810.rc
+    ueventd.samsungexynos9810.rc
 
 # Recovery
 PRODUCT_PACKAGES += \

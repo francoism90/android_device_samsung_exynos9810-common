@@ -9,11 +9,11 @@ LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR)/etc
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := ueventd.exynos9810.rc
+LOCAL_MODULE            := ueventd.samsungexynos9810.rc
 LOCAL_MODULE_STEM  		:= ueventd.rc
 LOCAL_MODULE_TAGS       := optional
 LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := etc/ueventd.exynos9810.rc
+LOCAL_SRC_FILES         := etc/ueventd.samsungexynos9810.rc
 LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR)
 include $(BUILD_PREBUILT)
 
@@ -46,7 +46,7 @@ LOCAL_MODULE            := init.samsungexynos9810.rc
 LOCAL_MODULE_TAGS       := optional
 LOCAL_MODULE_CLASS      := ETC
 LOCAL_SRC_FILES         := etc/init.samsungexynos9810.rc
-LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR)/etc/init
+LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR)/etc/init/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
