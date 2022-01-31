@@ -137,9 +137,12 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_RESET_IFACE_AFTER_MAC_CHANGE := true
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
-## VNDK
+# VNDK
 BOARD_VNDK_VERSION := current
-PRODUCT_TARGET_VNDK_VERSION := 29
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcutils-v29.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcutils-v29.so
 
 ## SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := mobicore

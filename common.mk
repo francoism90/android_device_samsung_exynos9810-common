@@ -19,9 +19,6 @@ COMMON_PATH := device/samsung/exynos9810-common
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/exynos9810-common/exynos9810-common-vendor.mk)
 
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 29
-
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.samsungexynos9810 \
