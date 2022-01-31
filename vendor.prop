@@ -32,6 +32,10 @@ ro.surface_flinger.use_color_management=true
 ro.hardware.keystore=mdfpp
 
 ## RIL
+keyguard.no_require_sim=true
+ro.debug_level=0x494d
+ro.hdcp2.rx=tz
+telephony.lteOnCdmaDevice=0
 vendor.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
