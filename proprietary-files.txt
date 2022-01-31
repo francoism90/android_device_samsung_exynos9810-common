@@ -27,6 +27,7 @@ vendor/lib64/libsecaudioinfo.so
 vendor/lib64/libvndsecril-client.so
 
 ## Camera Dependencies
+vendor/lib/hw/camera.exynos9810.so
 vendor/lib/libacryl_plugin_slsi_hdr10.so
 vendor/lib/libacryl.so
 vendor/lib/libcsc.so
@@ -37,6 +38,7 @@ vendor/lib/libsensorlistener.so
 vendor/lib/libstagefrighthw.so
 vendor/lib/libuniapi.so
 vendor/lib/libuniplugin.so
+vendor/lib64/hw/camera.exynos9810.so
 vendor/lib64/libacryl_plugin_slsi_hdr10.so
 vendor/lib64/libcsc.so
 vendor/lib64/libgiantmscl.so
