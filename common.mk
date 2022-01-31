@@ -76,7 +76,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service_64 \
+    android.hardware.camera.provider@2.5-service_64.exynos9810 \
     libsensorndkbridge \
     Snap
 
@@ -134,15 +134,15 @@ PRODUCT_PACKAGES += \
    libhwbinder \
    libhwbinder.vendor
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
-
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/idc/sec_e-pen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_e-pen.idc \
     $(COMMON_PATH)/configs/keylayout/gpio_keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio_keys.kl
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -162,6 +162,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl:64 \
     android.hardware.memtrack@1.0-service
+
+# Networking
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -274,6 +278,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung/aidl/power-libperfmgr
 
+# SP-NDK
+PRODUCT_PACKAGES += \
+    libvulkan
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.samsung
@@ -307,11 +315,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-# SP-NDK
-PRODUCT_PACKAGES += \
-    libvulkan
-
-# Net
-PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0

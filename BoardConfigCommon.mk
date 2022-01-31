@@ -12,14 +12,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 COMMON_PATH := device/samsung/exynos9810-common
 
-## Include
+## Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
-## Inherit from the proprietary version
+## Inherit proprietary vendor configuration
 include vendor/samsung/exynos9810-common/BoardConfigVendor.mk
 
 ## Architecture

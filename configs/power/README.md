@@ -1,6 +1,6 @@
 # Scaling Available Frequencies (Exynos9820)
 
-See https://www.kernel.org/doc/Documentation/power/pm_qos_interface.txt
+See <https://www.kernel.org/doc/Documentation/power/pm_qos_interface.txt>
 
 > Alternatively the user mode program could write a hex
 > string for the value using 10 char long format e.g. "0x12345678".

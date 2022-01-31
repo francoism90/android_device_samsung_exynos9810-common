@@ -9,10 +9,19 @@ af.fast_track_multiplier=1
 ro.charger.enable_suspend=true
 
 ## Dalvik
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.boot-dex2oat-threads=8
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.dex2oat-filter=quicken
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.image-dex2oat-filter=quicken
+dalvik.vm.image-dex2oat-threads=8
 dalvik.vm.lockprof.threshold=500
 
 ## fastbootd
-# ro.fastbootd.available=true
+ro.fastbootd.available=true
 
 ## FRP
 ro.frp.pst=/dev/block/persistent
@@ -39,3 +48,10 @@ telephony.lteOnCdmaDevice=0
 vendor.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
+
+# Samsung Stuff
+ro.product_ship=true
+config.disable_consumerir=true
+ro.vendor.cscsupported=1
+ro.cmc.device_type=pd
+ro.cmc.version=2.0
