@@ -33,6 +33,7 @@ vendor/lib/libacryl.so
 vendor/lib/libcsc.so
 vendor/lib/libgiantmscl.so
 vendor/lib/libhwjpeg.so
+vendor/lib/libpredeflicker_native.so
 vendor/lib/libSEF.quram.so
 vendor/lib/libsensorlistener.so
 vendor/lib/libstagefrighthw.so
@@ -41,6 +42,7 @@ vendor/lib/libuniplugin.so
 vendor/lib64/hw/camera.exynos9810.so
 vendor/lib64/libacryl_plugin_slsi_hdr10.so
 vendor/lib64/libcsc.so
+vendor/lib64/libflicker.so
 vendor/lib64/libgiantmscl.so
 vendor/lib64/libhwjpeg.so
 vendor/lib64/libSEF.quram.so
