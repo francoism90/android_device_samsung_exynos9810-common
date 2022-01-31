@@ -125,6 +125,20 @@ BOARD_HAS_DOWNLOAD_MODE := true
 ## RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+## SELinux
+BOARD_SEPOLICY_TEE_FLAVOR := mobicore
+include device/lineage/sepolicy/exynos/sepolicy.mk
+include device/samsung_slsi/sepolicy/sepolicy.mk
+
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+
+## VNDK
+BOARD_VNDK_VERSION := current
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcutils-v29.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcutils-v29.so
+
 ## Wi-Fi
 BOARD_WLAN_BCMDHD_SAE            := true
 BOARD_WLAN_DEVICE                := bcmdhd
@@ -136,20 +150,3 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_RESET_IFACE_AFTER_MAC_CHANGE := true
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
-
-# VNDK
-BOARD_VNDK_VERSION := current
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcutils-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcutils-v29.so
-
-## SELinux
-BOARD_SEPOLICY_TEE_FLAVOR := mobicore
-include device/lineage/sepolicy/exynos/sepolicy.mk
-include device/samsung_slsi/sepolicy/sepolicy.mk
-
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-
-## Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
