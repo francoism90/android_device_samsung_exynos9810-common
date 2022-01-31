@@ -288,24 +288,26 @@ vendor/lib/libRSDriverArm.so
 vendor/lib64/libRSDriverArm.so
 
 ## RIL
-vendor/bin/hw/rild
-vendor/bin/cbd
-vendor/bin/mcDriverDaemon
 vendor/bin/argosd
+vendor/bin/cbd
+vendor/bin/hw/rild
 vendor/bin/main_abox
+vendor/bin/mcDriverDaemon
 vendor/bin/secril_config_svc
-vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
+vendor/etc/plmn_delta.bin
 vendor/lib/libaudio-ril.so
 vendor/lib/libaudioproxy.so
 vendor/lib/libril.so:vendor/lib/libril-samsung.so
+vendor/lib/libsec_semRil.so
 vendor/lib/libsemnativecarrierfeature.so
 vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.1.so
 vendor/lib64/libril.so:vendor/lib64/libril-samsung.so
+vendor/lib64/libsec_semRil.so
 vendor/lib64/libsemnativecarrierfeature.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so

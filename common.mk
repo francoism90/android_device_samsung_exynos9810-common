@@ -97,7 +97,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.2-service.clearkey
 
-# Protobuf
+# Radio
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
@@ -113,11 +113,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.samsung
-
-ifeq ($(TARGET_HAVE_FOD),true)
-PRODUCT_PACKAGES += \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.samsung
-endif
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
