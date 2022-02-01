@@ -11,6 +11,7 @@ vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libaboxpcmdump.so
 vendor/lib/libalsautils_sec.so
 vendor/lib/libaudiodebugfs.so
+vendor/lib/libaudioproxy.so
 vendor/lib/libcodecdspdump.so
 vendor/lib/libdatamod.so
 vendor/lib/libfloatingfeature.so
@@ -19,12 +20,14 @@ vendor/lib/librecordalive.so
 vendor/lib/libSamsungPostProcessConvertor.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
-vendor/lib/libvndsecril-client.so
 vendor/lib/vndk/libaudioroute.so
 vendor/lib/vndk/libtinyalsa.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecaudioinfo.so
-vendor/lib64/libvndsecril-client.so
+
+## Bluetooth
+# Bluetooth (aptX) - from crosshatch - QP1A.190711.020
+# product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 ## Camera Dependencies
 vendor/lib/hw/camera.exynos9810.so
@@ -214,7 +217,7 @@ vendor/lib64/libkeymaster2_mdfpp.so
 vendor/lib64/libmdf.so
 
 ## NFC
-vendor/etc/libnfc-sec-vendor.conf
+vendor/etc/libnfc-nci.conf|03dc994c2f49ddb7f3893f97394184e124169c31
 
 ## OMX
 vendor/lib/libExynosOMX_Core.so
@@ -292,42 +295,40 @@ vendor/lib/libRSDriverArm.so
 vendor/lib64/libRSDriverArm.so
 
 ## RIL
-vendor/bin/argosd
-vendor/bin/cbd
-vendor/bin/hw/rild
-vendor/bin/main_abox
-vendor/bin/mcDriverDaemon
-vendor/bin/secril_config_svc
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_delta.bin
-vendor/lib/libaudio-ril.so
-vendor/lib/libaudioproxy.so
-vendor/lib/libril.so:vendor/lib/libril-samsung.so
 vendor/lib/libsec_semRil.so
-vendor/lib/libsec-ril-dsds.so
-vendor/lib/libsec-ril.so
-vendor/lib/libsemnativecarrierfeature.so
-vendor/lib/libvndsecril-client.so
-vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib/vendor.samsung.hardware.radio@2.0.so
-vendor/lib/vendor.samsung.hardware.radio@2.1.so
-vendor/lib64/libril.so:vendor/lib64/libril-samsung.so
 vendor/lib64/libsec_semRil.so
-vendor/lib64/libsec-ril-dsds.so
-vendor/lib64/libsec-ril.so
-vendor/lib64/libsemnativecarrierfeature.so
-vendor/lib64/libvkmanager_vendor.so
-vendor/lib64/libvndsecril-client.so
-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio@2.1.so
+
+## RIL - from beyond0lte
+vendor/bin/cbd|c5e4f2779b9c64bc728e23fcd60e104c4692c862
+vendor/bin/hw/rild|78c28a1e254318abae9c45699b69a61cf96d73b1
+vendor/lib/libril-samsung.so|d60c374b2fae7302d5e2ea469d01ff100bb7dd0a
+vendor/lib/libaudio-ril.so|2fee16ec35bcaccac0092b27b5ea434617877c3f
+vendor/lib/libsemnativecarrierfeature.so|ac27187c27eba2b96eaa4812b8e9b60193ca18d6
+vendor/lib/libsecril-client.so|b73a89d335b5891d7243d5ded2c98a76a7da3191
+vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so|c130cf05828ee1e415cf5823f2a67e023508f710
+vendor/lib/vendor.samsung.hardware.radio@2.0.so|1c976df4082e7829578a9cb48c040706e1753a6d
+vendor/lib/vendor.samsung.hardware.radio@2.1.so|6ce633e09b82f54aabd789ca23a5f1833a232f68
+vendor/lib64/libril-samsung.so|cf62752d95d5bd16fe2613ee0b4ab1cb5328b37c
+vendor/lib64/libsemnativecarrierfeature.so|b9663215a8cae356b4ddf86790359beda9c30f47
+vendor/lib64/libsecril-client.so|f63f4a658dec8e419f5316d3d0db086bdb17d595
+vendor/lib64/libvkmanager_vendor.so|60ddd8e656312fd022e0e8261f7f8c7e6087274e
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|ac01bab3a779374005bb6b94e8b354107671d5dc
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so|44d2173ab0187ec3460dd54135e2b406bc93b098
+vendor/lib64/vendor.samsung.hardware.radio@2.0.so|e9985c207ffec829a1746af29d45d9da1994805f
+vendor/lib64/vendor.samsung.hardware.radio@2.1.so|12953d8fe923094410dfa0ea983515b0b16e8eba
 
 ## SECNATIVE
 vendor/lib/libsecnativefeature.so
 vendor/lib64/libsecnativefeature.so
+
+## Mobicore
+vendor/bin/argosd
+vendor/bin/main_abox
+vendor/bin/mcDriverDaemon
 
 ## Mobicore Firmware
 vendor/app/mcRegistry/ffffffffd00000000000000000000062.tlbin

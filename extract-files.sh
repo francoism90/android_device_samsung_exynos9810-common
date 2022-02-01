@@ -66,8 +66,8 @@ function blob_fixup() {
         vendor/etc/libnfc-nci.conf)
             sed -i 's/\/data\/nfc/\/data\/vendor\/nfc/g' "${2}"
             ;;
-        vendor/lib*/libsec-ril.so)
-            "${PATCHELF}" --replace-needed libcutils.so libcutils-v29.so "${2}"
+        vendor/lib*/hw/audio.primary.exynos9810.so)
+            "${PATCHELF}" --replace-needed libvndsecril-client.so libsecril-client.so "${2}"
             ;;
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
