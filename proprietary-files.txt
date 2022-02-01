@@ -313,6 +313,7 @@ vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so|c130cf05828ee1e415cf5823f
 vendor/lib/vendor.samsung.hardware.radio@2.0.so|1c976df4082e7829578a9cb48c040706e1753a6d
 vendor/lib/vendor.samsung.hardware.radio@2.1.so|6ce633e09b82f54aabd789ca23a5f1833a232f68
 vendor/lib64/libril-samsung.so|cf62752d95d5bd16fe2613ee0b4ab1cb5328b37c
+vendor/lib64/libengmode_client.so|390e081c4cf994b5672862bb64875d777c23b6a6
 vendor/lib64/libsemnativecarrierfeature.so|b9663215a8cae356b4ddf86790359beda9c30f47
 vendor/lib64/libsecril-client.so|f63f4a658dec8e419f5316d3d0db086bdb17d595
 vendor/lib64/libvkmanager_vendor.so|60ddd8e656312fd022e0e8261f7f8c7e6087274e
