@@ -1,3 +1,5 @@
+libprotobuf-cpp-full.so
+libprotobuf-cpp-lite.so
 libGLES_mali.so
 libOpenCL.so
 libOpenCL.so.1

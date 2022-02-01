@@ -1659,8 +1659,8 @@ typedef struct camera3_stream {
      */
     uint32_t usage;
 
-    /* Samsung */
-    char pad[2];
+    /* unknown samsung addition */
+    char unknown1[4];
 
     /**
      * The maximum number of buffers the HAL device may need to have dequeued at
@@ -1761,6 +1761,8 @@ typedef struct camera3_stream {
     /* reserved for future use */
     void *reserved[6];
 
+    /* unknown samsung addition */
+    char unknown2[0x14];
 } camera3_stream_t;
 
 /**
